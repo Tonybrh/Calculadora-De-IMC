@@ -36,13 +36,23 @@ const validatorForm = () => {
     } else {
         small3.innerHTML = ""
     }
-    if( weight.value && high.value && user.value != ""){
+    if (weight.value && high.value && user.value != "") {
         calculaImc()
-    function calculaImc(){
-        const imc = (weight.value/(high.value**2))
-        const imcFixed = imc.toFixed(2)
-         res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}`
-}
+        function calculaImc() {
+            const imc = (weight.value / (high.value ** 2))
+            const imcFixed = imc.toFixed(2)
+            if (imcFixed < 18) {
+                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, abaixo do ideal`
+            } else if (imcFixed >= 18.5 && imcFixed <= 24.9) {
+                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está no ideal`
+            } else if (imcFixed >= 25 && imcFixed <= 29.9) {
+                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está com sobrepeso`
+            }else if(imcFixed >= 30 && imcFixed <=39.9){
+                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está com obesidade`
+            }else if(imcFixed > 40){
+                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está com obesidade grave`
+            }
+        }
     }
-    
+
 }
