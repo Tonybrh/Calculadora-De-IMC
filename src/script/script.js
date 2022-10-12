@@ -38,6 +38,7 @@ const validatorForm = () => {
     }
     if (weight.value && high.value && user.value != "") {
         calculaImc()
+        res.style.backgroundColor = rgb(22, 66, 91);
         function calculaImc() {
             const imc = (weight.value / (high.value ** 2))
             const imcFixed = imc.toFixed(2)

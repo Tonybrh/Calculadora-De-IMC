@@ -1,127 +1,133 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.corpo{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.corpo {
+    width: 500px;
+    margin: 100px auto;
+
 }
 
-.calc{
+.calc {
     display: flex;
     flex-direction: column;
     background-color: rgb(47, 102, 144);
     height: 500px;
-    width: 20%;
+    width: 100%;
     align-items: center;
     border-radius: 20px;
     padding: 20px;
 }
-.titulo{
-    text-align: center;
-    color: rgb(217, 220, 214);
+
+.titulo {
+    color: white;
     font-size: 22px;
     margin-top: 20px;
 }
-.userInfo{
-    color: rgb(217, 220, 214);
+
+.userInfo {
+    color: white;
     display: flex;
     flex-direction: column;
     margin: auto;
     font-size: 24px;
-    
+    align-items: flex-end;
+
 }
-.userInfo input{
+
+.userInfo input {
     padding: 10px;
     border-radius: 3px;
     border: 0;
     margin-top: 20px;
     height: 25px;
-    background-color: rgb(217, 220, 214);
+    background-color: white;
+
 }
 
-.error{
+.error {
+    margin-top: 5px;
     color: #DB5A5A;
+    align-self: flex-end;
+    margin-right: 20px;
 }
-.btn{
+
+.btn {
     margin-top: 20px;
+    padding-left: 15px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.btn button{
-    width: 50%;
+
+.btn button {
+    width: 130px;
     height: 30px;
     font-size: 18px;
     border: 0;
     border-radius: 3px;
-    background-color: rgb(217, 220, 214);
+    background-color: white;
     color: rgb(47, 102, 144);
+    transition: 0.3s;
 }
-.res{
+
+button:hover {
+    background-color: white;
+}
+
+.res {
     font-size: 20px;
     text-align: center;
     width: 50%;
     height: 30%;
     border-radius: 8px;
-    background-color: rgb(22, 66, 91);
-    color: rgb(217, 220, 214);
-    padding:10px;
+    color: white;
+    padding: 10px;
 }
 
-@media only screen and (max-width: 1500px) {
-    .calc{
-        width: 40%;
+@media only screen and (max-width:600px) {
+    .calc {
+        width: 450px;
     }
-    .btn button{
-        width: 40%;
-    }
-}
-@media only screen and (max-width:1200px){
-    
-    .calc{
-        width: 50%;
+    .corpo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-@media only screen and (max-width: 900px){
-    
-    .calc{
-        width: 55%;
+
+@media only screen and (max-width:460px) {
+    .corpo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
-    .titulo{
-        font-size: 14px;
+
+    .titulo h1 {
+        font-size: xx-large;
     }
-}
-@media only screen and (max-width:550px){
-    .calc{
-        width: 65%;
+
+    .calc {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(47, 102, 144);
+        height: 500px;
+        width: 80%;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px;
     }
-}
-@media only screen and (max-width:460px){
-    .calc{
-        width: 75%;
-    }
-    .res{
+
+    .res {
         width: 60%;
         height: 20%;
         font-size: 16px;
     }
-    .userInfo input{
+
+    .userInfo input {
         width: 70%;
-    }
-}
-@media only screen and (max-width:355px){
-    .userInfo input{
-        width: 50%;
-    }
-    .res{
-        width: 80%;
     }
 }
