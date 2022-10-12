@@ -15,6 +15,7 @@ const validatorForm = () => {
 
     if (user.value === "") {
         small1.classList = 'error'
+
         small1.innerHTML = "Preencha os dados"
         res.innerHTML = "Preencha todos os dados"
     } else {
@@ -43,15 +44,15 @@ const validatorForm = () => {
             const imc = (weight.value / (high.value ** 2))
             const imcFixed = imc.toFixed(2)
             if (imcFixed < 18) {
-                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, abaixo do ideal`
+                res.innerHTML = `Olá ${user.value}, seu Índice de Massa Corporal é ${imcFixed}, abaixo do ideal`
             } else if (imcFixed >= 18.5 && imcFixed <= 24.9) {
-                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está no ideal`
+                res.innerHTML = `Olá ${user.value}, seu Índice de Massa Corporal é ${imcFixed}, está no ideal`
             } else if (imcFixed >= 25 && imcFixed <= 29.9) {
-                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está com sobrepeso`
+                res.innerHTML = `Olá ${user.value}, seu Índice de Massa Corporal é ${imcFixed}, está com sobrepeso`
             }else if(imcFixed >= 30 && imcFixed <=39.9){
-                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está com obesidade`
+                res.innerHTML = `Olá ${user.value}, seu Índice de Massa Corporal é ${imcFixed}, está com obesidade`
             }else if(imcFixed > 40){
-                res.innerHTML = `Olá ${user.value} seu Índice de Massa Corporal é ${imcFixed}, está com obesidade grave`
+                res.innerHTML = `Olá ${user.value}, seu Índice de Massa Corporal é ${imcFixed}, está com obesidade grave`
             }
         }
     }

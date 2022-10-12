@@ -7,7 +7,7 @@
 
 .corpo {
     width: 500px;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
 
 }
 
@@ -42,21 +42,27 @@
     padding: 10px;
     border-radius: 3px;
     border: 0;
-    margin-top: 20px;
+    margin-top: 35px;
     height: 25px;
     background-color: white;
 
 }
 
+input::placeholder {
+    color: black;
+    opacity: 0.25;
+}
+
 .error {
+    font-size: 1rem;
     margin-top: 5px;
     color: #DB5A5A;
     align-self: flex-end;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .btn {
-    margin-top: 20px;
+    margin-top: 30px;
     padding-left: 15px;
     width: 100%;
     display: flex;
@@ -64,12 +70,12 @@
 }
 
 .btn button {
-    width: 130px;
-    height: 30px;
+    width: 129px;
+    height: 27px;
     font-size: 18px;
     border: 0;
     border-radius: 3px;
-    background-color: white;
+    background-color: whitesmoke;
     color: rgb(47, 102, 144);
     transition: 0.3s;
 }
@@ -86,12 +92,14 @@ button:hover {
     border-radius: 8px;
     color: white;
     padding: 10px;
+    line-height: 25px;
 }
 
 @media only screen and (max-width:600px) {
     .calc {
         width: 450px;
     }
+
     .corpo {
         display: flex;
         justify-content: center;
